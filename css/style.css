@@ -1,0 +1,158 @@
+*{	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Pridi', serif;
+	}
+
+.col-own{
+	width: 30%;
+}
+
+
+.loginImg{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	}
+
+
+.bg{
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	left: 0px;
+	z-index: -2;
+}
+
+.color-same{
+	color: #90281f;
+}
+.bg-same{
+	background: #90281f;
+}
+
+.tree{
+	position: absolute;
+	object-fit: cover;
+	width: 100% !important;
+	height: 100%;
+	top:0px;
+	left: 0px;
+	z-index: -1;
+	}
+
+
+.girl{
+	position: absolute;
+	scale: 0.50;
+	z-index: -1;
+	animation:name 10s linear infinite;
+	}
+
+
+@keyframes name{
+		0%{transform: translateX(calc(100% + 100vw));}
+
+		50%{transform: translateX(calc(-100% - 100vw));}
+
+		51%{transform: translateX(calc(-100% - 100vw))rotateY(180deg);}
+
+		100%{transform: translateX(calc(100% + 100vw)) rotateY(180deg);}
+
+}
+
+
+.leaf{
+	position: absolute;
+	animation: name1 10s linear forwards;
+	top: 0;
+	z-index: -1;
+}
+
+@keyframes name1{
+	0%{transform: translateY(0vh) scale(0.7);opacity: 0;}
+	10%{opacity: 1}
+	90%{opacity: 1}
+	100%{transform: translateY(100vh) scale(0.7) rotate(360deg);opacity: 0}
+}
+
+
+.own-p{
+	padding: 60px;
+}
+.sign-bg{
+	backdrop-filter: blur(15px);
+	}
+
+::placeholder{
+	color: #90281f;
+
+}
+
+input[type="text"],input[type="password"],input[type="email"]{
+	color: #90281f;
+	font-size: 18px;
+	font-weight: 600;
+}
+.out{
+	border: none;
+	outline: none;
+}
+
+.scale{
+	transition: .3s;
+}
+
+.scale:active{
+	transform: scale(0.9);
+}
+
+
+/*..........................second page css......................................*/
+
+
+.animation-none{
+	animation: anime .5s linear forwards;
+	}
+
+@keyframes anime{
+	0%{display: block;opacity: 1;transform: scale(1);}
+	80%{display: block;opacity: 1;}
+	100%{display: none;opacity: 0;transform: scale(0);}
+
+}
+
+.animation-none1{
+	animation: anime1 .9s linear forwards;
+	}
+
+@keyframes anime1{
+	0%{display: none;opacity: 0;transform: scale(0);}
+	80%{display: none;opacity: 0;}
+	100%{display: block;opacity: 1;transform: scale(1);}
+
+}
+
+
+.correct{
+	padding: 10px;
+	backdrop-filter: blur(5px);
+	border :1px solid #dee2e675;
+	}
+
+.animes{
+	animation: animes 3s linear infinite;
+}
+
+@keyframes animes{
+		0%{letter-spacing: 0px}
+		50%{letter-spacing: 2px}
+		100%{letter-spacing: 0px}
+
+}
+
