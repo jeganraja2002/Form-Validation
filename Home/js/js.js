@@ -60,38 +60,14 @@
 
 		else if(inputPass.value!==""&&inputEmail.value!==""){		
 			
-			let EMAIL = checkEmail()
+			let a = checkEmail()
+			let objStore={}
 			checkPass()
 			
 				if(boolean&&boolean1){
-					let hide = document.querySelector(".sign-bg")
-					hide.classList.add("animation-none")
-					let show = document.querySelector(".correct")
-					let userName = document.querySelector(".userName")
-					
-					setTimeout(function() {
-
-						show.classList.remove("d-none")
-						show.classList.add("animation-none1")
-						let a = "Thanks For Login "+EMAIL
-						let count=0
-
-						setTimeout(()=>{
-							let stop = setInterval(()=>{
-
-								userName.innerHTML+=a[count]
-								count++
-								if (count==a.length) {
-									clearInterval(stop)
-									userName.classList.add("animes")
-								}
-
-							},200)
-						},500)
-
-					}, 300);
-
-
+					objStore["name"]=a
+					sessionStorage.setItem("name",JSON.stringify(objStore))
+					location.href="../name/index.html"
 				}
 
 
@@ -136,9 +112,3 @@
 		
 	}
 
-
-let returnSign = document.querySelector(".return-sign")
-
-	returnSign.addEventListener("click",()=>{
-			location.href="../index.html"
-	})
